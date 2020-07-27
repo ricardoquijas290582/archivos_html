@@ -5,18 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="">
     <title>Documento</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/semantic.css">
+    <style>
+      header span{
+        color:chartreuse;
+
+      }
+    </style>
   </head>
   <body>
     <header>
-      <!-- <div>
-        <p>Este es mi encabezado</p>
-      </div> -->
-      <span>Bienvenido a tu página</span>
+      <div>
+        <p id="encabezado">Este es mi encabezado</p>
+      </div>
+      <div class="bienvenida-container">
+        <span class="bienvenida">Bienvenido a tu página</span>
+        <span>Ricardo</span>
+      </div>
       <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Proyectos</a>
-        <a href="#">Contacto</a>
+        <a class="ancore" href="#">Inicio</a>
+        <a class="ancore" href="#">Proyectos</a>
+        <a class="ancore" href="#">Contacto</a>
       </nav>
     </header>
 
@@ -71,6 +80,12 @@
     </main>
 
     <footer>
+      <nav>
+        <a class="ancore" href="#">Inicio</a>
+        <a class="ancore" href="#">Proyectos</a>
+        <a class="ancore" href="#">Contacto</a>
+        
+      </nav>
       <p>
         Actosoft - IIMAP Copyright 2020
       </p>

@@ -1,0 +1,35 @@
+header {
+    width: 50vw;
+    height: 30vh;
+}
+
+header p{
+    width: 20%;
+}
+
+p {
+    color:red;
+}
+
+.ancore {
+    font-size: 20px;
+}
+
+#encabezado {
+    width: 20%;
+    font-size: 35px;
+    color:blueviolet;
+    font-weight: 900;
+}
+
+.bienvenida {
+    padding: 20px;
+    border: 2px solid black
+}
+
+.bienvenida-container {
+    height: 10vh;
+    /* margin: 0 0 5vh; */
+    /* padding: 10px 15px 20px 30px; */
+    margin-bottom: 5vh;
+  }
