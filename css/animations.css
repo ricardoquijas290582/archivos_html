@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+body {
+    font-size: 62.5%;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(3, 117, 117);
+}
+
+.bubble {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 100%;
+    border: 0.15rem solid #ffffff;
+    background-color: rgb(98, 184, 255);
+    font-size: 1.5rem;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    animation-name: bubble;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    
+}
+
+.bubble::after {
+    content: '';
+    width: .3rem;
+    height: .6rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    position: absolute;
+    top: 0.4rem;
+    right: 0.6rem;
+    transform: rotate(-45deg);
+
+
+}
+
+.ocean {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-around;
+
+    position: absolute;
+    bottom: -1rem;
+    
+}
+
+@keyframes bubble {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+
+}
+
+.ocean div:nth-child(1){
+    animation-duration: 2s;
+}
+.ocean div:nth-child(2){
+    animation-duration: 6s;
+}
+.ocean div:nth-child(3){
+    animation-duration: 3s;
+}
+.ocean div:nth-child(4){
+    animation-duration: 5s;
+}
+.ocean div:nth-child(5){
+    animation-duration: 2s;
+}
+.ocean div:nth-child(6){
+    animation-duration: 2s;
+}
+
+#fish {
+    position: fixed;
+    top: 30%;
+    width: 6rem;
+    left: -8rem;
+
+    animation: swim 5s infinite ease-in-out;
+}
+
+@keyframes swim {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(150vw);
+    }
+}
+
+
+#fish2 {
+    position: fixed;
+    top: 50%;
+    width: 10rem;
+    left: -8rem;
+
+    animation: swim2 8s infinite ease-in-out;
+}
+
+@keyframes swim2 {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    50% {
+        transform: translateX(50vw) translateY(-50%);
+    }
+
+    100% {
+        transform: translateX(150vw) translateY(0);
+    }
+}
+
+
+#fish3 {
+    position: fixed;
+    top: 25%;
+    width: 10rem;
+    right: -8rem;
+
+    animation: swim3 4s infinite ease-in-out;
+}
+
+@keyframes swim3 {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-20vw) translateY(-70%);
+    }
+
+    70% {
+        transform: translateX(-70vw) translateY(-50%);
+    }
+
+    100% {
+        transform: translateX(150vw) translateY(0);
+    }
+}
