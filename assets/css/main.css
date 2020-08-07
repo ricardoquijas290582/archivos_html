@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.main-text-container {
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+    /* background-color: black; */
+}
+
+.main-text {
+    margin: 0 auto;
+    text-align: center;
+    /* border: 2px dotted #000; */
+    width: 50%;
+    background-color: tomato;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.biography {
+    color: #75B09C;
+    font-family: 'Poppins', sans-serif;
+    /* Etiquetas responsivas para texto */
+    /* 1em = 16px */
+    /* 1rem depende del padre */
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-align: center;
+    margin: 15vh 0;
+}
+
+.profile-photo {
+    width: 25vw;
+    border-radius: 50%;
+    border: 10px solid #75B09C;
+}

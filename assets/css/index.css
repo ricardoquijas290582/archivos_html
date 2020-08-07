@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  font-size: 62.5%;
+  color: #171c25;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 1rem 0;
+}
+
+p {
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 0.7rem 0;
+  color: #929292;
+}
+
+.header {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.header:hover figure img {
+  transform: scale(1);
+}
+
+.header figure {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+}
+
+.header figure img {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.4);
+  transition: all 0.3s;
+}
+
+.header figure figcaption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header figure figcaption h1,
+.header figure figcaption p {
+  margin: 1rem;
+  text-align: start;
+  color: #FFFFFF;
+}
+
+.header figure figcaption h1 {
+  font-size: 4rem;
+  animation: animation1 1s ease-in-out;
+}
+
+.header figure figcaption p {
+  font-size: 1.5rem;
+  animation: animation1 1.3s ease-in-out;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar .show {
+  border: 0;
+  position: fixed;
+  outline: none;
+  background: transparent;
+  color: #FFFFFF;
+  font-size: 2rem;
+  right: 1rem;
+  top: 1rem;
+  z-index: 10;
+}
+
+.navbar .show:hover + menu,
+.navbar .show:active + menu,
+.navbar .show:focus + menu {
+  transform: translateX(0);
+}
+
+.navbar menu {
+  width: 15rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #171c25dc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  transform: translateX(-15rem);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar menu a {
+  color: #FFFFFF;
+  padding: 1rem;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+aside {
+  background: #d5d5d5;
+  padding: 1rem 2rem 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+aside .my-photo {
+  background: url('../img/profile.jpg');
+  width: 15rem;
+  height: 15rem;
+  border-radius: 10rem;
+  box-shadow: 0rem 0rem 0.8rem #00000065;
+  background-position: center;
+  background-size: cover;
+  animation: animation1 1s ease-in-out;
+}
+
+aside .social {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  animation: animation1 1s ease-in-out;
+}
+
+aside .social a {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #171c25;
+  border-radius: 10rem;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.5rem;
+  color: currentColor;
+}
+
+main {
+  padding: 2rem;
+}
+
+main .favorite {
+  width: 100%;
+  background: #d5d5d5;
+  border-radius: 4rem 0;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  text-align: center;
+  animation: animation1 1s ease-in-out;
+}
+
+main .favorite img {
+  width: 100%;
+}
+
+main .favorite h3,
+main .favorite p {
+  margin: 1.5rem;
+}
+
+footer {
+  padding: 2rem;
+  background: #171c25;
+  text-align: center;
+}
+
+footer h2 {
+  color: #FFFFFF;
+}
+
+@keyframes animation1 {
+  from {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 700px){
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+}
